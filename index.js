@@ -1,107 +1,190 @@
-// function sumOddTo(n) {
-//     let sum = 0;
-//     for (let i = 1; i <= n; i += 2) {
-//         sum += i;
-//     }
-//     return sum;
-// }
-// console.log(sumOddTo(5)); 
-// console.log(sumOddTo(8));
-
-// function f(a) {
-//     let max = 0;
-//     let f1=(a)=>{
-//         if(max<a)
-//         {
-//             max=a;
+// Task1
+// let f=(a)=>{
+//     for(let i=0; i<a.length; i++){
+//         let cnt = 0;
+//         for(j=0; j<a.length; j++){
+//             if(j!=i && a[i] == a[j]){cnt++; break;}
 //         }
-//         console.log(max);
+//         if(cnt==0) return a[i]
 //     }
-//     return f1;
 // }
-// let x = f ();
-// x(2);
-// x(6);
-// x(3);
+// console.log(f("swiss"));   
 
-// function name(n) {
-//     let ans = 0;
-//     for(let i = n; i > 0; i= Math.floor(i/10))
-//     {
-//         ans+=i%10;
+
+// Task2
+// let f=(a)=>{
+//     let str = a.split("");
+//     for(let i=0; i<str.length; i++){
+//         if(str[i] >= 'a' && str[i] <= 'z' || str[i] >= 'A' && str[i] <= 'Z'){
+//             return false
+//         }
 //     }
-//     return ans;
+//     return true
 // }
-// console.log(name(1101));
+// console.log(f("12345"));
+// console.log(f("123a45"));     
 
-// function name() {
-//     let sum = 0;
-//     return function(n) {
-//         sum+=n;
-//         return sum;
+
+// Task3
+// let f=(a,num)=>{
+//    if(a.length > num){
+//     return a.slice(0, num)
+//    }
+//    else {
+//     return a
+//    }
+// }
+// console.log(f("hello world", 5));
+// console.log(f("javascript", 4));
+
+
+// Task4
+// let f=(a)=>{
+//     let ans = a[0] 
+//     for(let i=1; i<a.length; i++){
+//         if(a[i].toUpperCase() == a[i]) ans +="_"+a[i].toLowerCase();
+//         else ans+=a[i]
 //     }
+//     return ans
+// }
+// console.log(f("helloWorld"));
+// console.log(f("JavaScriptIsFun"));
+     
+
+// Task5
+// let f=(a)=>{
+//     let x = a.split(" "), ans=""
+//     for(let i=0; i<x.length; i++){
+//         let z = x[i][0].toUpperCase();
+//         let h = x[i][x[i].length-1].toUpperCase();
+//         ans += z+x[i].slice(1, x[i].length-1)+h+" ";
+//     }
+//     return ans 
+// }
+// console.log(f("hello world"));    
+
+
+// Task6
+// let f=(a)=>{
+//     let ans1 = a.replaceAll("https://", '')
+//     let ans2 = ans1.replaceAll("http://", '')
+//     let ans3 = ans2.replaceAll("www.", '')
+//     let ans4 = ans3.replaceAll("sub.", '')
+//     let ans5 = ans4.replaceAll("/path", '')
+//     return ans5
+// }
+// console.log(f("https://www.example.com/path"));   
+
+
+// Task7
+// let f=(a)=>{
+//     let ans = ''
+//     for(let i=0; i<a.length; i++){
+//         if((a[i]>='a' && a[i]<='z') || (a[i]>='A' && a[i]<='Z') || (a[i]>='0' && a[i]<='9') || (a[i]==" ")) ans+=a[i]
+//     }
+//     return ans
+// }
+// console.log(f("hello@world!"));
+
+
+// Task8
+// let f=(a)=>{
+//     let str = a.split("")
+//     let ans = ''
+//     for(let i=str.length-1; i>=0; i--){
+//         ans += str[i]
+//     }
+//     return ans == a
+// }
+// console.log(f("madam"));
+// console.log(f("hello"));
+
+
+// Task9
+// let f=(a)=>{
+//     return a.split(" ").reverse().join(" ");
+// }
+// console.log(f("hello world"));
+
+
+// Task10
+// let f=(a)=>{
+//     return a[a.length-1]+a.slice(1,a.length-1)+a[0]
+// }
+// console.log(f("hello"));
+
+
+// Task11
+// let f=(num)=>{
+//     let str = num.toString();
+//     let min = 9999999999999
+//     for(let i=0; i<str.length; i++){
+//         if(Number(str[i]) < min){
+//             min = Number(str[i]);
+//         }
+//     }
+//     return min
+// }
+// console.log(f(34268));
+// console.log(f(3407622));
+
+
+// Task12
+// let f=(num)=>{
+//     let str = num.toString();
+//     let min = -9999999999999
+//     for(let i=0; i<str.length; i++){
+//         if(Number(str[i]) > min){
+//             min = Number(str[i]);
+//         }
+//     }
+//     return min
+// }
+// console.log(f(34268));
+// console.log(f(3407622));
+
+
+// Task13
+// let f=(num1, num2)=>{
+//     let ans = ''
+//     for(let i=num1; i<=num2; i++){
+//         ans+=i+"," 
+//     }
+//     return ans
+// }
+// console.log(f(1,3));
+
+
+// Task15
+// let f=(num1, num2, num3)=>{
+//     let ans = (num1+num2+num3) + (num1-num2-num3) + (num1 * num2 *num3) + (num1 / num2/ num3) + (num1% num2 % num3)
+//     return ans
+// }
+// console.log(f(1,2,3));   
+
+
+// Task16
+// let f=(a)=>{
+//    let x = a.toString();
+//    return x[Math.floor(x.length/2)]
+// }
+// console.log(f(12345));
+
+
+// Task17
+// function name(){
+//     let cnt = 0
+//     let f=(a,b)=>{
+//         cnt++
+//         if(cnt%5==0) return a%b
+//         if(cnt%5==1) return a+b
+//         if(cnt%5==2) return a-b
+//         if(cnt%5==3) return a*b
+//         else return a/b
+//     }
+//     return f
 // }
 // let ans = name();
-// console.log(ans(3));
-// console.log(ans(5));
-
-// function name() {
-//     let sum = 0,cnt = 0;
-//     return function(n) {
-//         sum+=n; cnt ++;
-//         return sum/=cnt;
-//     }
-// }
-// let ans = name ();
-// console.log(ans(10));
-// console.log(ans(15));
-
-// function name(a){
-//     let fn1 = 1;
-//     let fn2 = 1;
-//     let fn = 0;
-//     for (let i = 3; i <= a; i++)
-//     {
-//         fn = fn1 + fn2;
-//         fn1 = fn2;
-//         fn2 = fn;
-//     }
-//     return fn;
-// }
-// console.log(name(6));
-
-// function name(n) {
-//     let cnt = 0, ans = 0;
-//     for (let i=n; i>0;i=Math.floor(i/10))
-//     {
-//         cnt++;
-//     }
-//     for (let i=n; i>0;i=Math.floor(i/10)) {
-//         ans+=Math.pow(i%10,cnt);
-//     }
-//     return ans==n;
-// }
-// console.log(name(153));
-// console.log(name(123));
-// console.log(name(370));
-
-// function name(n,k) {
-//     if(n%k==0)
-//     {
-//         return "true";
-//     }
-//     else 
-//     {
-//         return "false";
-//     }
-// }
-// console.log(name(10,5));
-
-// function name(n) {
-//     return function(k)
-//     {
-//         return n%k==0;
-//     }
-// }
-// let ans=name(3);
-// console.log(ans(9));
+// console.log(ans(1,2));
+// console.log(ans(1,2));
+// console.log(ans(1,2));
