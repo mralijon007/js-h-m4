@@ -1,132 +1,136 @@
-// T1
-// function name(a){
-//     return a.at(0)
-// }
-// console.log(name([1,2,3]));
-
-// T2
-// function name(...a){
-//     let n = [...a]
-//     return n
-// }
-// console.log(name(1,2));
-
-// T3
-// function name(a){
-//     return a.reverse()
-// }
-// console.log(name([1,2,3,4]));
-
-// T4
-// function name(a){
-//    return a.map((element)=>{
-//        return element += 1
-//     })
-// }
-// console.log(name([0,1,2,3]));
-
-
-// T5
-// function name(a){
-//     return a.at(-1)
-// }
-// console.log(name([1,2,3]));
-
-// T6
-// function name(a){
-//     return a.join("")
-// }
-// console.log(name([1,2,3,4,5,6]));
-
-
-// T7
-// function name(a,e){
-//     return a.includes(e)
-// }
-// console.log(name([1, 2, 3, 4, 5], 3));
-
-// T8
-// function name(a,e){
-//     return a.indexOf(e)
-// }
-// console.log(name(["hi", "edabit", "fgh", "abc"], "fgh"));
-
-// T9
-// lfunction name(a1,a2){
-//     return a1.concat(a2)
-// }
-// console.log(f([1, 3, 5], [2, 6, 8]));
-
-// T10
-// function name(a){
-//     return a.map(Number)
-// }
-// console.log(name(["9.4","4.2"]));
-----------------------------------------------------------
-// T1
-// function name(a){
-//     let cube = 0
-//     a.forEach((element)=>{
-//         cube += Math.pow(element, 3)
-//     })
-//     return cube
-// }
-// console.log(name([1, 5, 9]));
-
-// T2
-// function name(a){
-//     a.forEach((element)=>{
-//         Number(element)
-//     })
-//     return a.filter(Boolean)
-// }
-// console.log(name([0, 1, false, 2, "", 3]));
-
-// T3    
-// function name(...a){
-//    return a.every(element => element)
-// }
-// console.log(name([true, true, true]));
-
-// T4
-// function name(a){
-//     let sum = 0
-//     for(let i=0; i<a.length; i+=2){
-//         sum += a[i]
+//task1
+//-----------------------------------
+// Task1
+// function name(n) {
+//     let a = 0
+//     for(let key in n){
+//         n[key] = n[key]
+//         cnt++
 //     }
-//     return sum * a[a.length-1]
+//     return a
 // }
-// console.log(name([2,3,4,5]));
+// console.log(name({ a: "idiot", b: "idiot", c: "idiot" }));
+// console.log(name({ a: "moron", b: "scumbag", c:"moron", d: "dirtbag"}));
 
-// T5
-// function name(a1,a2)>{
-//     if(a1.length !== a2.length){
+
+// Task2
+// function name(n){
+//     let a = {
+//         1: "circle",
+//         2: "semi-circle",
+//         3: "triangle",
+//         4: "square",
+//         5: "pentagon",
+//         6: "hexagon",
+//         7: "heptagon",
+//         8: "octagon",
+//         9: "nonagon",
+//         10: "decagone"
+//     }
+//     return a[n]
+// }
+// console.log(name(3));
+
+
+// Task3
+// function name(n){
+//     return n >= k.min && n <= k.max
+// }
+// console.log(name(4, { min: 0, max: 5 }));
+
+
+// Task4
+// function name(n){
+//     let k = Object.values(n)
+//     return k.join(' ') +' '+ n[2] 
+// }
+// console.log(name({1: "Mommy", 2: "please", 3: "help"}));
+
+
+// Task5
+// function name(n,key){
+//     for(let keys in n){
+//         if(n[keys] == n[key]) return true
+//     }
+//     return false
+// }
+// console.log(name({ craves: 'true', midnight: 'true', snack: 'true' }, "morning"));
+// console.log(name({pot: 1, tot: 2, not: 3 }, "not"));
+
+
+// Task6
+// function name(n){
+//     let a = Infinity
+//     for(let key in n){
+//         if(n[key] < a) a = n[key]
+//     }
+//     return a
+// }
+// console.log(name({"cyan": 23,"magenta": 12,"yellow": 10}));
+
+
+// Task7
+// function name(n){
+//     for(let key in n){
 //         return false
 //     }
-//    for(let i=0; i<a1.length; i++){
-//     if(a1[i] !== a2[i]){
-//         return false
+//     return true
+// }
+// console.log(name({a:1}));
+
+
+// Task8
+// function name(n,k){
+//     let a = 0
+//     for(let key in n){
+//         a += n[key]
 //     }
-//    }
-//    return true
+//     return a - 
 // }
-// console.log(name([2,3,4,5,2], [2,3,4,5]));
-
-// T9
-// function name(a){
-//     let j = a.join("")
-//     let as = (${j.substring(0,3)})${j.substring(3,6)}-${j.substring(6)}
-//     return as
-// }
-// console.log(name([9,9,7,0,3,4,4,5,5]));
+// console.log(name({ skate: 10, painting: 20 }, 19));
 
 
-// T10
-// function name(...a){
-//     let s = 0
-//     for(let arr of a){
-//         s += arr.reduce((acc, cur)=> acc * cur , 1)
+// Task9
+// function name(n){
+//     let a = 0
+//     for(let key in n){
+//         a += n[key].score
 //     }
-//     return s 
+//     return a 
 // }
-// console.log(name([4, 2, 4], [3, 3, 3], [1, 1, 2], [2, 1, 1]));
+// console.log(name([{ tile: "N", score: 1 }, { tile: "K", score: 5 },{ tile: "Z", score: 10 }, { tile: "X", score: 8 }, { tile: "D", score: 2 },{ tile: "A", score: 1 }, { tile: "E", score: 1 }]));
+
+
+// Task10
+// function name(n,m,k)=>{
+//     n[m] = k 
+//     return n 
+// }
+// console.log(name({ piano: 500 }, "Brutus", 400));
+
+//----------------------------------------------------
+//task2 !!!
+//---------------------------------------------------
+  
+//task5
+// function name(n) {
+//     let ans = []
+//     for(let i = 0; i < a.lebgth; i++)
+//     {
+//         let sum = 0;
+//         for(let j = 0; j < a[i].grades.length; j++)
+//         {
+//             sum += a[i].grades[j];
+//         }
+//         sum /= a[i].grades.length;
+//         ans.push({name:a[i].name,grades:sum});
+//     }
+//     return ans;
+// }
+// console.log(name([{ name: "Alice", age: 22, grades: [90, 85, 88] }, { name: "Bob", age: 20, grades: [75, 92, 80] }, { name: "Charlie", age:21, grades: [88, 85, 90] },]));4
+
+//task 7
+// let f=(a,b)=>{
+//     let ans={}; for(let i=0;i<a.length;i++) ans[a[i]]=b[i]; return ans;
+// }
+// console.log(f(["name", "age", "city"], ["Alice", 25, "New York"]));
